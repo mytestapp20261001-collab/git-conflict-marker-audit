@@ -1,0 +1,125 @@
+{
+  "schema_version": 1,
+  "slug": "git-conflict-marker-audit",
+  "domain": "filesystem",
+  "guidance_group": "medium",
+  "source_commit": "1286096c10a23bbb04aca83679ae3c31f3326030",
+  "source_repository": "mytestapp20261001-collab/mytest-engineering-toolbox",
+  "source_repository_id": 1411411288,
+  "source_path": "tools/git-conflict-marker-audit",
+  "root_path": ".",
+  "publication_status": "prepared_only; coordinator verifies final repository identity and remote CI",
+  "expected_repository": "mytestapp20261001-collab/git-conflict-marker-audit",
+  "repository_id": null,
+  "preserved_files": [
+    {
+      "path": "README.md",
+      "size_bytes": 3878,
+      "sha256": "c8b99ac403d70e18628e084cb68e08b8084d2057216d0b0f554fb3d41fa12bde",
+      "git_blob_sha1": "67a1f0e4b2a9bce846150cfaace2d6cf85e96078",
+      "utf8": true,
+      "source_path": "tools/git-conflict-marker-audit/README.md"
+    },
+    {
+      "path": "SKILL.md",
+      "size_bytes": 1170,
+      "sha256": "84f9c83eb257da73bcfb99a7565cc8244475f3ab497295618aa9e560150c0458",
+      "git_blob_sha1": "fc4274df73264fd6d14f142ce1fbb7eda3753c0e",
+      "utf8": true,
+      "source_path": "tools/git-conflict-marker-audit/SKILL.md"
+    },
+    {
+      "path": "VALIDATION.md",
+      "size_bytes": 1121,
+      "sha256": "255e6187240b4082298f926fd0b47431e6f6c945219365034c78d955368474dc",
+      "git_blob_sha1": "88c91523447b656dfd804fc19a2e096174d81f19",
+      "utf8": true,
+      "source_path": "tools/git-conflict-marker-audit/VALIDATION.md"
+    },
+    {
+      "path": "_support.py",
+      "size_bytes": 6766,
+      "sha256": "ce5feab729b0dc2ab1019bb1808f06795e9c5cd98a220c61dcc464275938eca4",
+      "git_blob_sha1": "b52ce55f79b8b6eedf382eb6b12f60d1fb5f8291",
+      "utf8": true,
+      "source_path": "tools/git-conflict-marker-audit/_support.py"
+    },
+    {
+      "path": "examples/run_examples.py",
+      "size_bytes": 653,
+      "sha256": "dfb2c6bbc84e9fed4ffb989e3ce58935f88273165043cf373ce420da2f313a0d",
+      "git_blob_sha1": "71f4767fcbadb4e346fd6dd141c3c2462781172e",
+      "utf8": true,
+      "source_path": "tools/git-conflict-marker-audit/examples/run_examples.py"
+    },
+    {
+      "path": "test_tool.py",
+      "size_bytes": 5917,
+      "sha256": "07266605ebceaf55a93d4cc73cf6402d265a706e0caa28843e9f32d167b6379c",
+      "git_blob_sha1": "e863ba519239e7f9864b8f8176721a9a38b37d2a",
+      "utf8": true,
+      "source_path": "tools/git-conflict-marker-audit/test_tool.py"
+    },
+    {
+      "path": "tool.py",
+      "size_bytes": 3773,
+      "sha256": "ad85e689b55531cfe1a2f90cafe4c51179200f58acbebc68fe37caa1d1e10aa9",
+      "git_blob_sha1": "c1ce73586210c62bd8fd49a6a52643a4b58bb512",
+      "utf8": true,
+      "source_path": "tools/git-conflict-marker-audit/tool.py"
+    },
+    {
+      "path": "LICENSE",
+      "size_bytes": 1076,
+      "sha256": "dce76471613629e93f3f98b7aaa6f72ff9adb88204a3f83d3045952017ab2f46",
+      "git_blob_sha1": "677c4463d59b560db9c1fde1052eff6eefa6441a",
+      "utf8": true,
+      "source_path": "LICENSE"
+    },
+    {
+      "path": ".gitignore",
+      "size_bytes": 62,
+      "sha256": "e4d5aecc4cd36f593c2e7f3dad08b24261b13466b898004a445614058d29d8de",
+      "git_blob_sha1": "fe9f8fb619601213cbfef4f6eadb5d413d8f7f01",
+      "utf8": true,
+      "source_path": ".gitignore"
+    }
+  ],
+  "readme_checks": [
+    {
+      "label": "README synthetic positive/negative runner",
+      "args": [
+        "examples/run_examples.py"
+      ],
+      "expected_exit": 0,
+      "output": "example-json",
+      "documented_command": "python3 examples/run_examples.py"
+    },
+    {
+      "label": "CLI help",
+      "args": [
+        "tool.py",
+        "--help"
+      ],
+      "expected_exit": 0,
+      "output": "help"
+    },
+    {
+      "label": "CLI missing input",
+      "args": [
+        "tool.py"
+      ],
+      "expected_exit": 2,
+      "output": "json"
+    },
+    {
+      "label": "CLI unknown argument",
+      "args": [
+        "tool.py",
+        "--unsupported-migration-test"
+      ],
+      "expected_exit": 2,
+      "output": "json"
+    }
+  ]
+}
